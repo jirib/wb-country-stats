@@ -6,7 +6,7 @@ the data as, for example, CSV.
 Examples:
 
 ``` shell
-$ uv run wb-country-stats --list-countries | head
+$ wb-country-stats --list-countries | head
 AW | Aruba
 ZH | Africa Eastern and Southern
 AF | Afghanistan
@@ -20,21 +20,42 @@ AE | United Arab Emirates
 ```
 
 ``` shell
-$ uv run wb-country-stats --list-indicators 'urban population,.*of total'
+$ wb-country-stats --list-indicators 'urban population,.*of total'
 JI.POP.URBN.ZS                      | Urban population, total (% of total population)
 SP.URB.TOTL.FE.ZS                   | Urban population, female (% of total)
 SP.URB.TOTL.MA.ZS                   | Urban population, male (% of total)
 ```
+
+
 ## Installation
+
+- install `wb-country-stats` via _pipx_ (you can use _Mise_ to install _pipx_):
+  ``` shell
+  mise user -g pipx  # optional
+  ```
+  ``` shell
+  pipx install git+https://github.com/jirib/wb-country-stats.git
+  ```
+
+## Development
 
 - Mise
   * Linux (any)
-    - `curl https://mise.run | sh`
+    ``` shell
+    curl https://mise.run | sh
+    ```
   * Windows
-    - (powershell) `Set-ExecutionPolicy RemoteSigned -scope CurrentUser`
-    - (powershell) `(irm https://astral.sh/uv/install.ps1) -replace '\bexit\b', '#exit removed' | iex`
-- clone this repo
-- Python & UV
-  * `mise install`
-- Running graph.py (under normal user!)
-  * `uv run wb-country-stats --help`
+    - (powershell)
+      ```
+      Set-ExecutionPolicy RemoteSigned -scope CurrentUser
+      ```
+      ```
+      (irm https://astral.sh/uv/install.ps1) -replace '\bexit\b', '#exit removed' | iex
+      ```
+- Python development environment
+  ``` shell
+  mise install
+  ```
+  ```
+  uv run wb-country-stats --help
+  ```
