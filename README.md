@@ -3,7 +3,7 @@
 `wb-country-stats` is a tool which queries World Bank country statistics and dumps
 the data as, for example, CSV.
 
-An example:
+Examples:
 
 ``` shell
 $ uv run wb-country-stats --list-countries | head
@@ -19,6 +19,12 @@ AD | Andorra
 AE | United Arab Emirates
 ```
 
+``` shell
+$ uv run wb-country-stats --list-indicators 'urban population,.*of total'
+JI.POP.URBN.ZS                      | Urban population, total (% of total population)
+SP.URB.TOTL.FE.ZS                   | Urban population, female (% of total)
+SP.URB.TOTL.MA.ZS                   | Urban population, male (% of total)
+```
 ## Installation
 
 - Mise
