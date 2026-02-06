@@ -1,0 +1,29 @@
+[project]
+name = "wb-country-stats"
+version = "0.0.1"
+description = "World Bank Country Statistics Fetcher"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "requests",
+]
+
+[project.scripts]
+wb-country-stats = "wb_country_stats.cli:main"
+
+[dependency-groups]
+dev = [
+    "ruff",
+    "pytest",
+]
+
+[tool.ruff.lint]
+select = ["Q"]
+
+[tool.ruff.lint.flake8-quotes]
+inline-quotes = "double"
+multiline-quotes = "double"
+docstring-quotes = "double"
+
+[tool.uv]
+package = true

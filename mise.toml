@@ -1,0 +1,16 @@
+min_version = "2026.2.4"
+
+[env]
+_.python.venv = { path = ".venv", create = true }
+
+[tools]
+python = "3.14"
+uv = "latest"
+
+[tasks.test]
+description = "Run tests"
+run = "uv run pytest"
+
+[tasks.lint]
+description = "Lint the code"
+run = "ruff check src/"
