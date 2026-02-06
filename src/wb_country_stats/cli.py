@@ -22,7 +22,7 @@ def list_countries(pattern: str | None) -> None:
         print(f"{cou['iso2Code']} | {cou['name']}")
 
     if not found:
-        print("No country matched")
+        print("No country matched", file=sys.stderr)
         sys.exit(1)
 
 
