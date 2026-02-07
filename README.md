@@ -59,3 +59,24 @@ SP.URB.TOTL.MA.ZS                   | Urban population, male (% of total)
   ```
   uv run wb-country-stats --help
   ```
+
+  For development under _Visual Studio Code_ the following file might be helpful for debugging:
+
+  ``` shell
+  $ cat .vscode/launch.json
+  {
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug wb-country-stats (module)",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "wb_country_stats",
+            "args": ["--list-indicators"],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        }
+    ]
+}
+```
